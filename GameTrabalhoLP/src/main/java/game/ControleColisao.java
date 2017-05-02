@@ -12,6 +12,7 @@ import org.newdawn.slick.GameContainer;
 public class ControleColisao  extends Colisao{
 
     private Raquete raqueteDireita = null;
+    private Raquete raqueteEsquerda = null;
     private Bola bola = null;
     private GameContainer controller;    
     
@@ -33,14 +34,21 @@ public class ControleColisao  extends Colisao{
             Rectangle second = new Rectangle(bola.getPosX(), bola.getPosY(),
                     bola.getImage().getWidth() - 20, bola.getImage().getHeight() - 20);
             if (first.intersects(second)) {
-                controller.pause();
+                
+                bola.inverteMovimento();
             }
         }
-    }    
+    } 
+    
+    //substituir esse codigo no projeto de voces
     private void iniciaInformacoesRaqueteEBola(Observavel ob){        
-        if (ob instanceof Raquete) 
-            this.raqueteDireita = (Raquete) ob;
-         else if (ob instanceof Bola) 
+        if (ob instanceof Raquete){ 
+            if(this.raqueteDireita == null)
+                this.raqueteDireita = (Raquete) ob;
+            else if(this.raqueteEsquerda == null)
+                this.raqueteEsquerda = (Raquete) ob;
+        }else if (ob instanceof Bola){ 
             this.bola = (Bola) ob;
+        }
     }
 }

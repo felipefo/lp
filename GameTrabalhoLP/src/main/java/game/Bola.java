@@ -15,6 +15,9 @@ public class Bola  extends Observavel implements Observador{
     Image image;
     int posX;
     int posY;
+    int movimento=5;
+    
+    
     public Bola(String pathImage, int posX, int posY){        
         this.posX = posX;
         this.posY = posY;
@@ -60,7 +63,16 @@ public class Bola  extends Observavel implements Observador{
             this.posY = ThreadLocalRandom.current().nextInt(0, 400);
         }
         else{
-            this.posX = this.posX + 5;            
+            this.posX = this.posX + movimento;            
         }                        
+    }    
+    public void inverteMovimento(){        
+        if(movimento > 0){
+            movimento = -5;
+        }else{
+            movimento= 5;
+        }
+        
     }
+    
 }
