@@ -10,18 +10,13 @@ Especificação do Trabalho de Linguagem de Programação
 | RF001 | O sistema deve permitir ao usuário fazer movimentos verticais |
 
 
-### Segunda entrega(Parcial)
-
-04/05/2017
-
-| RF003 | O sistema deve terminar o jogo e informar o vencedor caso a bola atinja o final da tela de um dos jogadoreso | 
-| RF007 | O sistema deve permitir que os usuários joguem | 
-| RF008 | O sistema deve mudar a trajetória da bola de acordo com a posição que o usuário acerta a bola | 
-
 
 ### Terceira entrega(Final)
 18/05/2017
 
+| RF003 | O sistema deve terminar o jogo e informar o vencedor caso a bola atinja o final da tela de um dos jogadoreso | 
+| RF007 | O sistema deve permitir que os usuários joguem | 
+| RF008 | O sistema deve mudar a trajetória da bola de acordo com a posição que o usuário acerta a bola | 
 | RF002 | O sistema deve permitir ao usuário reiniciar o jogo a qualquer momento |
 | RF004 | O sistema deve permitir que o usuário escolha jogar em dupla ou sozinho |
 | RF005 | O sistema deve permitir exibir um plano de fundo | 
