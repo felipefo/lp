@@ -11,7 +11,7 @@ Especificação do Trabalho de Linguagem de Programação
 
 
 
-### Terceira entrega(Final)
+### Entrega(Final)
 18/05/2017
 
 | RF003 | O sistema deve terminar o jogo e informar o vencedor caso a bola atinja o final da tela de um dos jogadoreso | 
