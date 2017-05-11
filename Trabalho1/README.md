@@ -77,3 +77,81 @@ O trabalho vale 30 pontos.
 
 ![alt text](https://github.com/felipefo/lp/blob/master/Trabalho1/imagem_jogo.png)
 
+
+
+'''''
+//codigo modificado classe Raquete 
+
+
+	@Override    
+    public void update(Observavel ob) {
+        //esse metodo seta as informacoes de requete direita e a bola;
+        //não remover esse metodo
+        iniciaInformacoesRaqueteEBola(ob);        
+        if (this.raqueteDireita != null && this.bola != null) {
+            Rectangle first = new Rectangle(raqueteDireita.getPosX(), raqueteDireita.getPosY(),
+                    raqueteDireita.getImage().getWidth() - 20, raqueteDireita.getImage().getHeight() - 20);
+            Rectangle second = new Rectangle(bola.getPosX(), bola.getPosY(),
+                    bola.getImage().getWidth() - 20, bola.getImage().getHeight() - 20);
+            if (first.intersects(second)) {
+                
+                bola.inverteMovimento();
+            }
+        }
+    } 
+
+//substituir esse codigo no projeto de voces
+
+	public class Raquete extends Observavel  {
+   
+    Image image;
+    int posX;
+    int posY;
+    boolean ehRaqueteEsquerda;
+	
+	
+	public Raquete(String pathImage, int posX, int posY, boolean ehEsquerda){        
+        this.posX = posX;
+        this.posY = posY;
+        this.ehRaqueteEsquerda=ehEsquerda;    
+        try {
+            image = new Image(pathImage);
+        } catch (SlickException ex) {
+            Logger.getLogger(Raquete.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+
+    private void iniciaInformacoesRaqueteEBola(Observavel ob){        
+        if (ob instanceof Raquete){ 
+            
+            if(!((Raquete)ob).ehRaqueteEsquerda)
+                this.raqueteDireita = (Raquete) ob;
+            else if(((Raquete)ob).ehRaqueteEsquerda)
+                this.raqueteEsquerda = (Raquete) ob;
+        }else if (ob instanceof Bola){ 
+            this.bola = (Bola) ob;
+        }
+    }
+
+	
+	public void setPosX(int posX) {
+        if(ehRaqueteEsquerda )
+        {
+            if(posX > 0 && posX < 320)        
+               this.posX = posX;
+        }else
+        {
+            if(posX >= 320 && posX <= 640)
+            this.posX = posX;
+        }
+    }
+
+//codigo modificado classe Raquete 		
+	
+	
+
+
+''''
+
+
