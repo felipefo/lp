@@ -122,17 +122,6 @@ O trabalho vale 30 pontos.
     }
 
 
-    private void iniciaInformacoesRaqueteEBola(Observavel ob){        
-        if (ob instanceof Raquete){ 
-            
-            if(!((Raquete)ob).ehRaqueteEsquerda)
-                this.raqueteDireita = (Raquete) ob;
-            else if(((Raquete)ob).ehRaqueteEsquerda)
-                this.raqueteEsquerda = (Raquete) ob;
-        }else if (ob instanceof Bola){ 
-            this.bola = (Bola) ob;
-        }
-    }
 
 	
 	public void setPosX(int posX) {
@@ -153,5 +142,27 @@ O trabalho vale 30 pontos.
 
 
 ''''
+
+
+''''
+//ControleColisao
+
+    private void iniciaInformacoesRaqueteEBola(Observavel ob){        
+        if (ob instanceof Raquete){ 
+            
+            if(!((Raquete)ob).ehRaqueteEsquerda)
+                this.raqueteDireita = (Raquete) ob;
+            else if(((Raquete)ob).ehRaqueteEsquerda)
+                this.raqueteEsquerda = (Raquete) ob;
+        }else if (ob instanceof Bola){ 
+            this.bola = (Bola) ob;
+        }
+    }
+
+
+''''
+
+
+
 
 
