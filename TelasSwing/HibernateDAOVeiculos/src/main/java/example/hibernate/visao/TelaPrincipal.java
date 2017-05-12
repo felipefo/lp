@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package example.hibernate.visao;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author felip
- */
 public class TelaPrincipal extends javax.swing.JFrame {
 
     /**
@@ -40,6 +32,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel1.setText("Bem vindo!");
 
         jMenu1.setText("Cadastro");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         jMenuItem1.setText("Veiculos");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +81,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
         telaVeiculos.setVisible(true);
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+         
+        TelaVeiculos telaVeiculos = new TelaVeiculos();
+        telaVeiculos.setDefaultCloseOperation(HIDE_ON_CLOSE);
+        telaVeiculos.setVisible(true);
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments

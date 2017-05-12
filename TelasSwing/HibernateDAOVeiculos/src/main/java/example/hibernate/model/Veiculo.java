@@ -6,10 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
-
 @Entity
 @Table(name = "veiculo")
-
 public class Veiculo {
 
     @Id
@@ -20,36 +18,40 @@ public class Veiculo {
     private String modelo;
     private String ano;
     private String quilometragem;
+
+    private String observacao;
     private String tipo;
 
+    
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+    
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getMarca() {
         return marca;
     }
-
     public void setMarca(String marca) {
         this.marca = marca;
     }
-
     public String getModelo() {
         return modelo;
     }
-
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-
     public String getAno() {
         return ano;
     }
-
     public void setAno(String ano) {
         this.ano = ano;
     }

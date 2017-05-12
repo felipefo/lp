@@ -5,7 +5,7 @@
 	<artifactId>HibernateDAO</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>HibernateDAOVeiculos</name>
+	<name>HibernateDAOVeiculosComTela</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<!-- hibernate -->
