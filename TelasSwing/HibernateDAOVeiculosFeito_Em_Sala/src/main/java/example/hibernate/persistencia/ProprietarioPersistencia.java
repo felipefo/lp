@@ -1,18 +1,26 @@
-
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package example.hibernate.persistencia;
 
+import example.hibernate.model.Proprietario;
 import example.hibernate.model.Veiculo;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class VeiculoPersistencia  {
-    protected static Session sessao;
+/**
+ *
+ * @author felip
+ */
+public class ProprietarioPersistencia {
+        protected static Session sessao;
     protected Transaction transacao;
    
-    public void inserir( Veiculo obj ) throws Exception
+    public void inserir( Proprietario obj ) throws Exception
     {
             sessao = HibernateUtil.getSession();
             transacao = sessao.beginTransaction();
@@ -22,7 +30,7 @@ public class VeiculoPersistencia  {
             sessao.close();
     }
     
-    public void alterar( Veiculo obj ) throws Exception
+    public void alterar( Proprietario obj ) throws Exception
     {
             sessao = HibernateUtil.getSession();
             transacao = sessao.beginTransaction();
@@ -31,7 +39,7 @@ public class VeiculoPersistencia  {
             transacao.commit();
             sessao.close();
     }
-    public void deletar( Veiculo obj ) throws Exception
+    public void deletar( Proprietario obj ) throws Exception
     {
             sessao = HibernateUtil.getSession();
             transacao = sessao.beginTransaction();
@@ -40,19 +48,19 @@ public class VeiculoPersistencia  {
             transacao.commit();
             sessao.close();
     }
-    public List<Veiculo> listar() throws Exception
+    public List<Proprietario> listar() throws Exception
     {
         sessao = HibernateUtil.getSession();
         transacao = sessao.beginTransaction();
         List objts;
         objts = null;
-        Criteria selectAll = sessao.createCriteria(Veiculo.class);
+        Criteria selectAll = sessao.createCriteria(Proprietario.class);
         transacao.commit();
         objts = selectAll.list();
         sessao.close();
         return objts;
     }
-     public Veiculo listar(Class clazz, String pk) throws Exception
+     public Proprietario listar(Class clazz, String pk) throws Exception
     {
         sessao = HibernateUtil.getSession();
         transacao = sessao.beginTransaction();
@@ -61,7 +69,7 @@ public class VeiculoPersistencia  {
         transacao.commit();
         sessao.flush();
         sessao.close();
-        return (Veiculo)ob;
+        return (Proprietario)ob;
     } 
      
     
