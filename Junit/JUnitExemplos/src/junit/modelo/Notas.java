@@ -4,10 +4,8 @@ package junit.modelo;
 import java.util.ArrayList;
 
 
-public class Notas {    
-    
-    public ArrayList<Integer> notas;
-    
+public class Notas {        
+    public ArrayList<Integer> notas;    
     public Notas(){
         notas = new ArrayList<Integer>();
     }

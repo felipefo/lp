@@ -44,13 +44,8 @@ public class NotasTest {
         instance.addNotas(4);
         instance.addNotas(6);
         double media  = 4.4;
-        assertEquals( media , instance.calculaMedia(), 1);
-        // TODO review the generated test code and remove the default call to fail.        
+        assertEquals( media , instance.calculaMedia(), 1);        
     }
-
-    /**
-     * Test of calculaMedia method, of class Notas.
-     */
     @Test
     public void testCalculaMedia() {
         System.out.println("calculaMedia");
