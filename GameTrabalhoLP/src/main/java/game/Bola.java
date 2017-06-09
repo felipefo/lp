@@ -16,6 +16,7 @@ public class Bola  extends Observavel implements Observador{
     int posX;
     int posY;
     int movimento=5;
+    int movimentoY=0;
     
     
     public Bola(String pathImage, int posX, int posY){        
@@ -44,7 +45,12 @@ public class Bola  extends Observavel implements Observador{
     }
 
     public void setPosY(int posY) {
-        this.posY = posY;
+        
+        if(posY == 0 ){
+            movimentoY = 1;
+        }
+        else  this.posY = posY;
+        
     }
     
     @Override
@@ -60,7 +66,7 @@ public class Bola  extends Observavel implements Observador{
             this.posX = -20;
             //ThreadLocalRandom.current().nextInt(0, 400);
             //pega uma posicao randomica entre 0 e 400 já vimos em sala de aula.
-            this.posY = ThreadLocalRandom.current().nextInt(0, 400);
+            this.posY +=  movimentoY;
         }
         else{
             this.posX = this.posX + movimento;            

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath example.hibernate.Main</exec.args>
+                <exec.executable>java</exec.executable>
+                <Env.path>C:\Users\felip\Google Drive\AULAS_IFES\Tecnico em Informatica\Linguagem de ProgramaÃ§Ã£o_2016_2\Aulas\Aula11\HibernateExample</Env.path>
+            </properties>
+        </action>
+    </actions>

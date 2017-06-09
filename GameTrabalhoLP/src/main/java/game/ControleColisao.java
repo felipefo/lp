@@ -43,9 +43,10 @@ public class ControleColisao  extends Colisao{
     //substituir esse codigo no projeto de voces
     private void iniciaInformacoesRaqueteEBola(Observavel ob){        
         if (ob instanceof Raquete){ 
-            if(this.raqueteDireita == null)
+            
+            if(!((Raquete)ob).ehRaqueteEsquerda)
                 this.raqueteDireita = (Raquete) ob;
-            else if(this.raqueteEsquerda == null)
+            else if(((Raquete)ob).ehRaqueteEsquerda)
                 this.raqueteEsquerda = (Raquete) ob;
         }else if (ob instanceof Bola){ 
             this.bola = (Bola) ob;

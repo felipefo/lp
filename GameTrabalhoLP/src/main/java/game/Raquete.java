@@ -15,9 +15,12 @@ public class Raquete extends Observavel  {
     Image image;
     int posX;
     int posY;
-    public Raquete(String pathImage, int posX, int posY){        
+    boolean ehRaqueteEsquerda;
+    
+    public Raquete(String pathImage, int posX, int posY, boolean ehEsquerda){        
         this.posX = posX;
         this.posY = posY;
+        this.ehRaqueteEsquerda=ehEsquerda;    
         try {
             image = new Image(pathImage);
         } catch (SlickException ex) {
@@ -34,14 +37,25 @@ public class Raquete extends Observavel  {
         return posX;
     }
     public void setPosX(int posX) {
-        this.posX = posX;
+        if(ehRaqueteEsquerda )
+        {
+            if(posX > 0 && posX < 320)        
+               this.posX = posX;
+        }else
+        {
+            if(posX >= 320 && posX <= 640)
+            this.posX = posX;
+        }
     }
     public int getPosY() {
         return posY;
     }
 
     public void setPosY(int posY) {
-        this.posY = posY;
+        
+            this.posY = posY;    
+        
+        
     }
     
     
