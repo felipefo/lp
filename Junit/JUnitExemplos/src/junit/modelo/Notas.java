@@ -17,9 +17,9 @@ public class Notas {
     }     
     public double calculaMedia(){
         double soma  = 0;
-        for(Integer nota : notas )
+        for(Integer nota : notas )            
             soma += nota;
-        double media = soma/notas.size();
+        double media = soma/(notas.size()-1);
         return media;
     }
 }

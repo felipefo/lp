@@ -36,14 +36,13 @@ public class NotasTest {
     @Test
     public void testAddNotas() {
         System.out.println("addNotas");
-        int nota = 0;
         Notas instance = new Notas();
         instance.addNotas(4);
         instance.addNotas(4);
+        instance.addNotas(5);
+        instance.addNotas(3);
         instance.addNotas(4);
-        instance.addNotas(4);
-        instance.addNotas(6);
-        double media  = 4.4;
+        double media  = 4.0;
         assertEquals( media , instance.calculaMedia(), 1);        
     }
     @Test
@@ -52,6 +51,7 @@ public class NotasTest {
         Notas instance = new Notas();
         double expResult = 0.0;
         instance.addNotas(0);        
+        instance.addNotas(0);
         double result = instance.calculaMedia();
         assertEquals(expResult, result, 1);                
     }
